@@ -7,6 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const styles = {
   card: {
@@ -21,6 +22,8 @@ const styles = {
 function Home(props) {
   const { classes } = props;
   return (
+    <>
+    <Link to={"/manage"}>Manage Your Page</Link>
     <Card className={classes.card}>
       <CardActionArea>
         <CardContent>
@@ -38,6 +41,7 @@ function Home(props) {
         </Button>
       </CardActions>
     </Card>
+    </>
   );
 }
 
